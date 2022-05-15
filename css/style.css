@@ -22,6 +22,9 @@
 
 }
 
+.all{
+    background-color: rgb(240, 240, 240);
+}
 .giris{
     padding: 10px;
     text-align: center;

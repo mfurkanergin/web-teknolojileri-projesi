@@ -22,6 +22,9 @@
 .baslik:hover{
     opacity: 1;
 }
+.govde{
+    background-color: rgb(240, 240, 240);
+}
 
 .il{
     padding: 16px;

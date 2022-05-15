@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/d5b5e71fcf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ilgi_alanlarim.css">
+
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Şehrim</title>
+</head>
+<body>
+<div class="container-fluid header" id="top">
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Hakkımda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cv.html">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ilgi_alanlarim.html">İlgi Alanlarım</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sehrim.html">Şehrim</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="iletisim.html">İletişim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
+</div>
+
+<script>
+
+        const number = "299"
+        const flrdnum = parseInt(number)
+        console.log(flrdnum)
+
+    const api = 'http://api.coinlayer.com/api/live?access_key=6ef650b205c3eda608a1f6f880197288'
+
+
+function BTC() {
+    const api = 'http://api.coinlayer.com/api/live?access_key=6ef650b205c3eda608a1f6f880197288'
+fetch(api)
+    .then(response => {
+        
+        
+       return response.json()
+    })
+    .then(data => {
+        console.log(data)
+        const results = data.rates.BTC
+        console.log(results)
+        const convertedint = parseInt(results)
+        const flrd = Math.round(convertedint)
+        document.getElementById('data').innerHTML = flrd + "$"
+        console.log(flrd)
+       
+    })
+}
+
+function BNB() {
+    const api = 'http://api.coinlayer.com/api/live?access_key=6ef650b205c3eda608a1f6f880197288'
+fetch(api)
+    .then(response => {
+        
+        
+       return response.json()
+    })
+    .then(data => {
+        console.log(data)
+        const results = data.rates.BNB
+        console.log(results)
+        const convertedint = parseInt(results)
+        const flrd = Math.round(convertedint)
+        document.getElementById('data').innerHTML = flrd + "$"
+        console.log(flrd)
+       
+    })
+}
+
+function ETH() {
+    const api = 'http://api.coinlayer.com/api/live?access_key=6ef650b205c3eda608a1f6f880197288'
+fetch(api)
+    .then(response => {
+        
+        
+       return response.json()
+    })
+    .then(data => {
+        console.log(data)
+        const results = data.rates.ETH
+        console.log(results)
+        const convertedint = parseInt(results)
+        const flrd = Math.round(convertedint)
+        document.getElementById('data').innerHTML = flrd + "$"
+        console.log(flrd)
+       
+    })
+}
+
+    </script>
+<body>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-6 ">
+            <div class="col-xl-8 resim"><img src="../img/trade.png" alt=""></a></div>
+            
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    
+    <div class="row">
+
+    <div class="col-md-3"></div>
+    <div class="col-md-6  icerik">
+        <h4 id="kripto">En çok uğraştığım ilgi alanım: Kripto Paralar</h4>
+          <div><p>Ücretsiz bir API servisinden aldığım veriler neticesinde bazı kripto para birimlerinin anlık fiyatlarına üstüne tıklayarak ulaşabilirsiniz</p>
+            <p>Kullandığım API servisi: api.coinlayer.com </p>  </div>
+        
+    </div>
+    <div class="col-md-4"></div>
+</div>
+</body>
+<body class="egg">
+    <div class="container">
+
+
+   <h2 id="egg" class="m-5 maintxt">Fiyatını Öğrenmek istediğiniz Kripto Paranın Üzerine Basınız...</h2>
+
+   <div class="row">
+       <div class="col-sm">
+   
+            <button id="eggo" onclick="BTC()" class="btn btn-outline-groovyy m-5 jusbtn btn-lg">BTC</button>
+        
+        </div> 
+
+        <div class="col-sm">
+   
+            <button id="eggo" onclick="BNB()" class="btn btn-outline-groovyy m-5 jusbtn btn-lg">BNB</button>
+        
+        </div> 
+
+        <div class="col-sm">
+   
+            <button id="eggo" onclick="ETH()" class="btn btn-outline-groovyy m-5 jusbtn btn-lg">ETH</button>
+        
+        </div> 
+
+    </div>
+   
+    
+
+    <div class="data-row">
+        <h3 id="data" class="h-25% w-25% maintxt m-5">FİYAT</h3>
+    </div>
+
+    </div>
+</body>
+
+
+<div class="container-fluid footer">
+    <p>Mustafa Furkan Ergin - B211210373</p>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>

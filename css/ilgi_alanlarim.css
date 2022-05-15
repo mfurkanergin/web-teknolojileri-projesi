@@ -1,0 +1,24 @@
+.resim{
+    height: 15em;    
+    margin: 0;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2cm;
+}
+.resim img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.data-row{ 
+    text-align: center;
+}
+.row{ 
+    text-align: center;
+}
+.egg{
+    text-align: center;
+
+}
